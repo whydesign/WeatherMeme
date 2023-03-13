@@ -1,0 +1,113 @@
+// Own Custom Tab Panels
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$tabs: tab0, tab1, tab2, tab3, tab4, tab5, tab6, tab7;
+
+.tabbed {
+
+  figure {
+    display: block;
+    margin: 0;
+    clear: both;
+
+    & > div {
+      border: 3px solid $primary-color;
+      padding: 40px 20px;
+      border-radius: 0 6px 6px;
+    }
+  }
+
+   > input, figure > div {
+    display: none;
+  }
+
+  .tab_buttons {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -moz-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+
+    label.button {
+      height: auto;
+      line-height: normal;
+      padding: 10px 20px;
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: 0;
+      border-radius: 4px 4px 0 0;
+    }
+  }
+}
+
+nav {
+  label {
+    float: left;
+    padding: 15px 15px;
+    background-color: #a74846;
+    border-color: #a74846;
+    border-bottom: 1px solid $dark-grey;
+    opacity: 0.7;
+
+    &:nth-child(1) {
+
+    }
+
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+
+    &:hover {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      opacity: 1;
+    }
+
+    &:active {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      opacity: 1;
+    }
+
+    &:not(:active) {
+    }
+  }
+}
+
+@each $tab in $tabs {
+  .#{$tab} {
+
+    &:checked {
+
+      & ~ figure {
+
+        .#{$tab} {
+          display: block;
+        }
+      }
+
+      & ~ nav {
+
+        label.#{$tab} {
+          position: relative;
+          background-color: $primary-color;
+          border-color: $primary-color;
+          opacity: 1;
+
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            left: 0;
+            bottom: -1px;
+          }
+        }
+
+      }
+    }
+  }
+}

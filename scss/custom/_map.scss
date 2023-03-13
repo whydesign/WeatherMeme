@@ -1,0 +1,25 @@
+// Own Custom Map Styles
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.map_headline {
+  color: $font-color;
+  background-color: $primary-color;
+  display: inline-block;
+  padding: 3px 8px 0;
+  border-radius: 6px 6px 0 0;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+}
+#map {
+  height: 500px;
+  border-radius: 0 6px 6px 6px;
+  border: 3px solid $primary-color;
+
+  .leaflet-marker-icon {
+    border: 3px solid $font-color;
+    border-radius: 100%;
+  }
+}

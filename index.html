@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, nofollow">
+    <title>Sollte ich heute raus gehen?</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#ff6a67">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#3f4954">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <script src="js/jquery-3.6.1.min.js?ver=3.6.1"></script>
+    <link rel="stylesheet" type="text/css" href="leaflet/leaflet.css">
+    <script src="leaflet/leaflet.js"></script>
+    <link rel="stylesheet" type="text/css" href="leaflet-openweathermap.css" />
+    <script src="leaflet-openweathermap.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="scss/skeleton.css">
+</head>
+<body>
+    <div class="content">
+        <h1 class="text-center w700 headline">Sollte ich heute raus gehen?</h1>
+
+        <div class="header"><span></span></div>
+
+        <div class="row weather_infos">
+
+            <div class="date_today one-half column w600"></div>
+            <div class="weather_today one-half column text-right">
+                <span class="u-pull-right"></span>
+                <span class="u-pull-right"></span>
+            </div>
+
+            <hr class="u-full-width">
+
+            <div class="row text-center weather_infos_main">
+                <div class="three columns feels_like"><strong>Gefühlt</strong></div>
+                <div class="three columns temp_max"><strong>Höchstwert</strong></div>
+                <div class="three columns temp_min"><strong>Tiefstwert</strong></div>
+                <div class="three columns humidity"><strong>Feuchtigkeit</strong></div>
+            </div>
+
+            <hr class="u-full-width">
+
+            <div class="row text-center weather_infos_main">
+                <div class="three columns sunrise"><strong>Sonnenaufgang</strong></div>
+                <div class="three columns sunset"><strong>Sonnenuntergang</strong></div>
+                <div class="three columns wind_speed"><strong>Windgeschwindigkeit</strong></div>
+                <div class="three columns wind_deg"><strong>Windrichtung</strong></div>
+            </div>
+
+            <hr class="u-full-width">
+
+            <div class="row weather_forcast">
+                <div class="tabbed">
+
+                    <nav class="tab_buttons">
+                    </nav>
+
+                    <figure>
+                    </figure>
+                </div>
+            </div>
+
+            <hr class="u-full-width hr-hollow">
+
+            <div class="pollen_button"><a class="button button-primary u-full-width" href="https://www.wetteronline.de/pollenvorhersage" target="_blank">Aktueller Pollenflug</a></div>
+
+            <hr class="u-full-width hr-hollow">
+
+            <div class="map_headline">Niederschlagsradar</div>
+
+            <div id="map"></div>
+
+        </div>
+
+    </div>
+
+    <div class="footer text-center">
+        Handmade by <a href="https://whydesign-halle.de/" target="_blank" tabindex="4">whydesign</a>.<br>
+        Map Marker Icon by <a href="https://www.iconfinder.com/laurareen" target="_blank">Laura Reen</a>.
+    </div>
+</body>
+</html>
